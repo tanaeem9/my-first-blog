@@ -8,5 +8,8 @@ class Form(models.Model):
     text = models.TextField()
     published_date = models.DateTimeField(blank=True, null=True)
 
+    def publish(self):
+        self.save()
+    
     def __str__(self):
             return self.title
